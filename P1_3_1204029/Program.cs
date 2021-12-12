@@ -11,19 +11,26 @@ namespace P1_3_1204029
         static void Main(string[] args)
         {
             Console.Clear();
-            Console.Write("ANAK AYAM TURUN  ");
-
-
-            int ja = Convert.ToInt16(Console.ReadLine());
-
-            int aym = ja;
-
-            for (int i = ja; i > 1; i--)
+            Console.WriteLine("Masukkan Nilai N");
+            int N = Convert.ToInt32(Console.ReadLine());
+            if (N >= 1 || N <= 10)
             {
-                Console.WriteLine("Anak ayam turunlah " + ja-- + ",  mati satu tinggallah " + ja);
+                for (int i = N; i > 0; i--)
+                {
+                    if (i == 1)
+                    {
+                        Console.WriteLine("Anak ayam turunlah {0}, mati satu tinggallah induknya", i);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Anak ayam turunlah {0}, mati satu tinggalah {1}", i, i - 1);
+                    }
+                }
             }
-            Console.WriteLine("Anak ayam turunlah " + ja + ",  mati satu tinggallah induknya ");
-
+            else
+            {
+                Console.WriteLine("Nilai ga boleh Dibawah 0 atau diatas 10");
+            }
         }
     }
 }
